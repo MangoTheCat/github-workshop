@@ -1,0 +1,32 @@
+---
+title: "Collaboration on GitHub #1"
+author: "Gábor Csárdi"
+email: "gcsardi@mango-solutions.com"
+maketitle: true
+ratio: 4x3
+output:
+  rmdshower::shower:
+    self_contained: false
+    theme: mango
+    keep_md: true
+---
+
+# Issues gaborcsardi/praise
+
+# Issue comments
+
+# CONTRIBUTING.md and issue templates
+
+# Referencing commits in issues
+
+# Referencing issues in commits
+
+# Writing good issues
+
+# News feed
+
+# Following people
+
+# Fixing minor things
+
+# Automatic fork
