@@ -3,35 +3,6 @@ Gábor Csárdi
 
 # Outline
 
-<style>
-  .inverse h1 { color: white; background-color: black; padding: 30px; opacity: 0.7; }
-  .grey { opacity: 0.4; }
-  h1 emph { color: blue; }
-  p.subtitle {
-    color: #ccc;
-   	text-align: center;
-	background-color: black;
-	padding: 2px;
-	margin-top: 400px;
-	margin-left: -45px;
-	margin-right: -45px;
-	font-size: 135%;
-	font-weight: bold;
-  }
-  p.subtitle a {
-    color: #ccc;
-    text-decoration: none;
-	font-size: 135%;
-	font-weight: bold;
-  }
-  p.subtitletop {
-    margin-top: -130px;
-  }
-  img.gh {
-    margin-top: 30px;
-  }
-</style>
-
 
 
 ## 1. Reading code
@@ -220,7 +191,7 @@ praise::praise()
 ```
 
 ```
-## [1] "You are great!"
+## [1] "You are priceless!"
 ```
 
 # Install remotes using itself
