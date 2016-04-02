@@ -7,6 +7,29 @@ Gábor Csárdi
   .inverse h1 { color: white; background-color: black; padding: 30px; opacity: 0.7; }
   .grey { opacity: 0.4; }
   h1 emph { color: blue; }
+  p.subtitle {
+    color: #ccc;
+   	text-align: center;
+	background-color: black;
+	padding: 2px;
+	margin-top: 400px;
+	margin-left: -45px;
+	margin-right: -45px;
+	font-size: 135%;
+	font-weight: bold;
+  }
+  p.subtitle a {
+    color: #ccc;
+    text-decoration: none;
+	font-size: 135%;
+	font-weight: bold;
+  }
+  p.subtitletop {
+    margin-top: -130px;
+  }
+  img.gh {
+    margin-top: 30px;
+  }
 </style>
 
 
@@ -28,125 +51,9 @@ Gábor Csárdi
 
 # 1. Reading code { .shout }
 
-# The hardest part of programming:<br> Doing things the *right way*
+# The hardest part of coding: the *right way*
 
-Example: how do you update elements of a named list based on another list?
-
-
-```r
-old <- list(foo = 1, bar = 2)
-new <- list(bar = 3, foobar = 10)
-```
-
-Want:
-
-
-```r
-list(foo = 1, bar = 3, foobar = 10)
-```
-
-How about
-
-
-```r
-old[ names(new) ] <- new
-```
-
-# Updating a list
-
-But hey, what if `new` has no names?
-
-
-```r
-old <- list(foo = 1, bar = 2)
-new <- list(bar = 3, NULL, foobar = 10)
-old[ names(new) ] <- new
-old
-```
-
-```
-## $foo
-## [1] 1
-## 
-## $bar
-## [1] 3
-## 
-## [[3]]
-## NULL
-## 
-## $foobar
-## [1] 10
-```
-
-# Updating a list
-
-Not good. Need to drop unnamed elements from `new`:
-
-
-```r
-old <- list(foo = 1, bar = 2)
-new <- list(bar = 3, NULL, foobar = 10)
-good <- names(new) != ""
-old[ names(new)[good] ] <- new[good]
-old
-```
-
-```
-## $foo
-## [1] 1
-## 
-## $bar
-## [1] 3
-## 
-## $foobar
-## [1] 10
-```
-
-# Updating a list
-
-But what if `new` is empty:
-
-
-```r
-old <- list(foo = 1, bar = 2)
-new <- list()
-good <- names(new) != ""
-old[ names(new)[good] ] <- new[good]
-old
-```
-
-```
-## $foo
-## [1] 1
-## 
-## $bar
-## [1] 2
-```
-
-# Updating a list
-
-> * What if we want to remove when `new` is `NULL`?
-> * What if we want it to be recursive?
-> * It is not trivial to get it right.
-
-```r
-❯ modifyList
-function (x, val, keep.null = FALSE)
-{
-    stopifnot(is.list(x), is.list(val))
-    xnames <- names(x)
-    vnames <- names(val)
-    vnames <- vnames[nzchar(vnames)]
-    if (keep.null) {
-        for (v in vnames) {
-            x[v] <- if (v %in% xnames && is.list(x[[v]]) && ...
-                list(modifyList(x[[v]], val[[v]], keep.null ...
-...
-```
-
-# Sort a data frame? The *correct* solution?
-
-Depends.
+Sort a data frame? *correct* solution? Depends.
 
 ```r
 dd[with(dd, order(-z, b)), ]
@@ -184,6 +91,90 @@ http://stackoverflow.com/questions/1296646
 
 <img src="source.png" class="cover height grey">
 
+# The GitHub UI { .fullpage .shout }
+
+<p class="subtitle"> https://github.com/gaborcsardi/praise </p>
+
+# { .fullpage }
+<img src="praise.png" class="cover gh">
+<p class="subtitle subtitletop">Files</p>
+
+# { .fullpage }
+<img src="praise-files.png" class="cover gh">
+<p class="subtitle subtitletop">Files</p>
+
+# { .fullpage }
+<img src="praise-readme.png" class="cover gh">
+<p class="subtitle subtitletop">README.md</p>
+
+# { .fullpage }
+<img src="praise-commits.png" class="cover gh">
+<p class="subtitle subtitletop">Commits</p>
+
+# { .fullpage }
+<img src="praise-commit-ids.png" class="cover gh">
+<p class="subtitle subtitletop">Commit ids</p>
+
+# { .fullpage }
+<img src="praise-browse-1.png" class="cover gh">
+<p class="subtitle subtitletop">Browse files at another version</p>
+
+# { .fullpage }
+<img src="praise-browse-2.png" class="cover gh">
+<p class="subtitle subtitletop">Browse files at another version</p>
+
+# { .fullpage }
+<img src="praise-diff-1.png" class="cover gh">
+<p class="subtitle subtitletop">Diffs</p>
+
+# { .fullpage }
+<img src="praise-diff-2.png" class="cover gh">
+<p class="subtitle subtitletop">Diffs</p>
+
+# { .fullpage }
+<img src="praise-history-1.png" class="cover gh">
+<p class="subtitle subtitletop">History of files</p>
+
+# { .fullpage }
+<img src="praise-history-2.png" class="cover gh">
+<p class="subtitle subtitletop">History of files</p>
+
+# { .fullpage }
+<img src="praise-blame-1.png" class="cover gh">
+<p class="subtitle subtitletop">Blame</p>
+
+# { .fullpage }
+<img src="praise-blame-2.png" class="cover gh">
+<p class="subtitle subtitletop">Blame</p>
+
+# { .fullpage }
+<img src="praise-star.png" class="cover gh">
+<p class="subtitle subtitletop">Star</p>
+
+# { .fullpage }
+<img src="praise-star-2.png" class="cover gh">
+<p class="subtitle subtitletop">Star</p>
+
+# { .fullpage }
+<img src="praise-star-3.png" class="cover gh">
+<p class="subtitle subtitletop">Star</p>
+
+# { .fullpage }
+<img src="praise-search.png" class="cover gh">
+<p class="subtitle subtitletop">Search: find users</p>
+
+# { .fullpage }
+<img src="praise-search-2.png" class="cover gh">
+<p class="subtitle subtitletop">Search: within repository</p>
+
+# { .fullpage }
+<img src="praise-search-3.png" class="cover gh">
+<p class="subtitle subtitletop">Search: all R code</p>
+
+# { .fullpage }
+<img src="praise-search-4.png" class="cover gh">
+<p class="subtitle subtitletop">Search: all CRAN packages</p>
+
 # Reading R code
 
 ## R source code, including base packages
@@ -202,50 +193,101 @@ https://github.com/bioconductor-mirror
 
 https://github.com/rforge
 
+# Installing packages from GitHub
 
-# GitHub UI Parts gaborcsardi/praise
+```r
+remotes::install_github("gaborcsardi/praise")
+```
 
-## Files
+```
+Downloading GitHub repo gaborcsardi/praise@master
+Installing package into ‘/Users/gaborcsardi/r_pkgs’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘praise’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (praise)
+```
 
-## README.md
 
-## Commits
+```r
+praise::praise()
+```
 
-## Commit ids
+```
+## [1] "You are great!"
+```
 
-## Browse files at another version
+# Install remotes using itself
 
-## Diffs
+## https://github.com/mangothecat/remotes#readme
 
-## History of files
+```r
+base <- "https://raw.githubusercontent.com/"
+repo <- "MangoTheCat/remotes/"
+file <- "master/install-github.R"
+url <- paste0(base, repo, file)
+source(url)$value("mangothecat/remotes")
+```
 
-## Blaming
+```
+Downloading GitHub repo mangothecat/remotes@master
+Installing package into ‘/Users/gaborcsardi/r_pkgs’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘remotes’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (remotes)
+```
 
-## Star
+# Dependencies to GitHub packages
 
-## Watch
+## Use the `Remotes` field in `DESCRIPTION`
 
-# Finding people on GitHub
+```
+...
+Suggests:
+    testthat
+Imports:
+    description,
+    rcmdcheck
+Remotes:
+    metacran/description,
+    mangothecat/rcmdcheck
+...
+```
 
-## Search
+```
+❯ remotes::install_github("mangothecat/goodPractice")
+Downloading GitHub repo mangothecat/goodPractice@master
+Downloading GitHub repo metacran/description@master
+...
+```
 
-# Finding R packages on GitHub
+# Exercises
 
-## Base R code wch/r-source
+## 1. Find your favorite R developer on GitHub.
 
-## URLs in CRAN packages
+## 2. Find your favorite R package on GitHub.
 
-## Search
+## 3. Star it.
 
-## CRAN @ GitHub
+## 4. Look at the commit history.
 
-## Bioc @ GitHub
+## 5. Find out when it was last updated.
 
-## Installing packages from GitHub
+## 6. Find out who updated it.
 
-## Install remotes using itself
+## 7. Find out what changed.
 
-## Install repos using remotes
-
-## Dependencies to GitHub packages
-
+## 8. Install your favorite R package using `remotes`.
