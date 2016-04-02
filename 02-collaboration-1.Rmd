@@ -9,24 +9,184 @@ output:
     self_contained: false
     theme: mango
     keep_md: true
+    css: github-workshop.css
 ---
 
-# Issues gaborcsardi/praise
+# Issues { .shout }
 
-# Issue comments
+# { .fullpage }
+<img src="praise-issues-1.png" class="cover gh">
+<p class="subtitle subtitletop">https://github.com/gaborcsardi/praise/issues</p>
 
-# CONTRIBUTING.md and issue templates
+# { .fullpage }
+<img src="praise-issues-2.png" class="cover gh">
+<p class="subtitle subtitletop">https://github.com/gaborcsardi/praise/issues</p>
 
-# Referencing commits in issues
+# { .fullpage }
+<img src="praise-issue-comments.png" class="cover gh">
+<p class="subtitle subtitletop">Issue comments</p>
 
-# Referencing issues in commits
+# { .fullpage }
+<img src="praise-issue-comments-markdown.png" class="cover gh">
+<p class="subtitle subtitletop">Markdown in issue comments</p>
+
+# GitHub Issues features
+
+> * Labels: *bug*, *enhancement*, *help wanted* *wontfix*, etc. custom labels
+> * Milestones (for releases)
+> * Assignees (can only assign collaborators)
+> * Cross references (later)
+> * Contributing guildelines (`CONTRIBUTING.md`)
+> * Issue templates (new)
+
+# Following people (in a good way) { .shout }
+
+# { .fullpage }
+<img src="follow.png" class="cover gh">
+<p class="subtitle subtitletop">Following</p>
+
+# News feed { .shout }
+
+# { .fullpage }
+<img src="newsfeed.png" class="cover gh">
+<p class="subtitle subtitletop">News feed</p>
+
+# Contributing code { .shout }
+
+# { .fullpage }
+<img src="praise-readme.png" class="cover gh">
+<p class="subtitle subtitletop">The `praise` package</p>
+
+# { .fullpage }
+<img src="praise-code.png" class="cover gh">
+<p class="subtitle subtitletop">The `praise` package: code & words</p>
+
+# { .fullpage }
+<img src="praise-code-2.png" class="cover gh">
+<p class="subtitle subtitletop">The `praise` package: code</p>
+
+# { .fullpage }
+<img src="praise-words.png" class="cover gh">
+<p class="subtitle subtitletop">The `praise` package: words</p>
+
+# Small fixes { .shout }
+
+# { .fullpage }
+<img src="praise-words-edit.png" class="cover gh">
+<p class="subtitle subtitletop">Edit a file on GitHub</p>
+
+# { .fullpage }
+<img src="praise-words-edit-2.png" class="cover gh">
+<p class="subtitle subtitletop">Edit a file on GitHub</p>
+
+# { .fullpage }
+<img src="link-to-commit.png" class="cover gh">
+<p class="subtitle subtitletop">Referencing commits in issues</p>
+
+# { .fullpage }
+<img src="link-to-issue.png" class="cover gh">
+<p class="subtitle subtitletop">Referencing issues in commits</p>
+
+# { .fullpage }
+<img src="praise-close-issue.png" class="cover gh">
+<p class="subtitle subtitletop">Close issues with commit messages</p>
+
+# { .fullpage }
+<img src="praise-fork.png" class="cover gh">
+<p class="subtitle subtitletop">Fork</p>
+
+# { .fullpage }
+<img src="praise-fork-2.png" class="cover gh">
+<p class="subtitle subtitletop">Fork</p>
 
 # Writing good issues
 
-# News feed
+> * Search existing issues before creating a new one
+> * Short and specific subject line. Not "`ggplot bug`"!
+> * If it is a bug, provide a reproducible example
+> * Be concise
+> * Code formatting: use Markdown, indicate language
+> * Include relewant people: @gaborcsardi
+> * Add screenshots if needed (not for code!)
+> * Refer to related issues
+> * If you know what's broken, refer to the code
 
-# Following people
+# Writing good commit messages
 
-# Fixing minor things
+<img src="xkcd-commits.png" style="width:100%">
 
-# Automatic fork
+# Writing good commit messages
+
+> * First line <50 characters, consice summary
+> * Then empty line, and more detailed discussion
+> * Wrap text at ~72 characters
+> * Refer to issues, related commits, users involved
+> * Look for the contribution guideline of the project
+> * Try answering the questions:
+>     * Why is this change necessary?
+>     * How does it address the issue?
+>     * What side effects does this change have?
+
+# Bad commit messages
+
+```
+❯ git log --oneline
+2a2f940 more people using floor(<int>)
+eaaea2e lost part of 70391 (prcomp)
+c676fa2 Typo (PR#16790)
+0e80506 emacs reformatting malfunction
+3cc0574 missing space
+f0df6ee update
+a25a086 Typo
+3c0b89a Add COMPILED_BY config variable (to replace temporary R_COMPIL...
+d1e8198 more on pow
+d878101 more caveats on ar
+3031b67 Arrange for jumps to jump to intermediate contexts with on.exi...
+e765820 add comments
+514eded replace more ifelse() by if .. else
+862326a update (for r70289)
+e1d9673 Tweaks.
+a502aa1 Updated.
+394c11c attempt to make this compile on 32-bit systems
+17eba69 markup, dates
+```
+
+# Good commit messages
+
+```
+❯ git log --oneline
+d076262 Add repo status badge to README
+b248f9b Add a bunch of adjectives
+8102103 Remove some wild adjectives
+2c8c122 Add test cases, closes #3
+f88869c Add Sindre to DESCRIPTION Authors
+526d22e Ignore README.md and NEWS.md in /
+6bca8de Write README, move it to inst/ NEWS as well
+eefa3d8 praise() from template, with matching capitalization, closes #1
+ea15d81 Better name for data file
+fa4497d Move data from data/ to R/ #2
+3c11ab7 add .Rproj, project documentation
+8310b33 Fix newline between badges in README
+799649d Add superb words
+142d531 Fix README
+7289ad6 Fix DESCRIPTION
+db41eea Initial commit of Mason template
+```
+
+# Exercises
+
+## 1. Fork gaborcsardi/praise
+
+## 2. Enable issues in your fork
+
+## 3. Create an issue in *your fork*
+   Create an issue for say *adding new adverbs*, or
+   adding *encouragement*, etc.
+   
+## 4. Add a label to your isse: e.g. `bug` or `enhancement`
+   
+## 5. Assign the issue to yourself
+   
+## 6. Edit your fork to fix the issue, with `closes #{issue}`
+
+## 7. Check that the issue is closed
