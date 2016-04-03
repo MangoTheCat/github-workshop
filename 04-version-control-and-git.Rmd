@@ -286,15 +286,50 @@ git status
 
 # Creating repository at GitHub
 
-TODO
+<img src="github-new-repo-1.png" style="width:100%">
+
+# { .fullpage }
+<img src="github-new-repo-2.png" class="cover gh">
+<p class="subtitle subtitletop">New repository</p>
+
+# { .fullpage }
+<img src="github-new-repo-3.png" class="cover gh">
+<p class="subtitle subtitletop">New repository</p>
 
 # Create R Studio project locally
 
-TODO
+<img src="github-new-repo-4.png" style="height:70%">
+
+# Create R Studio project locally
+
+<img src="github-new-repo-5.png" style="width:70%">
+
+# Create R Studio project locally
+
+<img src="github-new-repo-6.png" style="width:70%">
+
+# Create R Studio project locally
+
+<img src="github-new-repo-7.png" style="width:70%">
+
+# Initial commit
+
+<img src="github-new-repo-8.png" style="width:70%">
+
+# { .fullpage }
+<img src="github-new-repo-3.png" class="cover gh">
+<p class="subtitle subtitletop">New repository</p>
 
 # Add project to the new GitHub repository
 
-TODO
+```shell
+git remote add origin https://github.com/gaborcsardi/argh.git
+git push -u origin master
+```
+
+# { .fullpage }
+<img src="github-new-repo-9.png" class="cover gh">
+<p class="subtitle subtitletop">New repository</p>
 
 # Exercises
 
