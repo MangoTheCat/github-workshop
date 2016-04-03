@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R development using GitHub</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="01-reading-code_files/rmdshower/shower/node_modules/shower-mango/styles/screen-4x3.css">
+  <link rel="stylesheet" href="01-reading-code_files/rmdshower/style-common.css">
+  <link rel="stylesheet" href="01-reading-code_files/rmdshower/style-mango.css">
+  
+  
+    <style type="text/css">
+   div.sourceCode { overflow-x: auto; }
+   table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+     margin: 0; padding: 0; vertical-align: baseline; border: none; }
+   table.sourceCode { width: 100%; line-height: 100%; }
+   td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+   td.sourceCode { padding-left: 5px; }
+   code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+   code > span.dt { color: #902000; } /* DataType */
+   code > span.dv { color: #40a070; } /* DecVal */
+   code > span.bn { color: #40a070; } /* BaseN */
+   code > span.fl { color: #40a070; } /* Float */
+   code > span.ch { color: #4070a0; } /* Char */
+   code > span.st { color: #4070a0; } /* String */
+   code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+   code > span.ot { color: #007020; } /* Other */
+   code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+   code > span.fu { color: #06287e; } /* Function */
+   code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+   code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+   code > span.cn { color: #880000; } /* Constant */
+   code > span.sc { color: #4070a0; } /* SpecialChar */
+   code > span.vs { color: #4070a0; } /* VerbatimString */
+   code > span.ss { color: #bb6688; } /* SpecialString */
+   code > span.im { } /* Import */
+   code > span.va { color: #19177c; } /* Variable */
+   code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+   code > span.op { color: #666666; } /* Operator */
+   code > span.bu { } /* BuiltIn */
+   code > span.ex { } /* Extension */
+   code > span.pp { color: #bc7a00; } /* Preprocessor */
+   code > span.at { color: #7d9029; } /* Attribute */
+   code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+   code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+   code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+   code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  
+            <link rel="stylesheet" href="github-workshop.css"/>
+      
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>R development using GitHub</h1>
+    <p>Gábor Csárdi</p>
+  </header>
+
+    <section class="slide level1 titlepage">
+    <h1>R development using GitHub</h1>
+    <h2>Gábor Csárdi <br> <a href="mailto:gcsardi@mango-solutions.com">gcsardi@mango-solutions.com</a></h2>
+  </section>
+    
+  
+<section id="outline" class="slide level1">
+<h1>Outline</h1>
+<h2 id="reading-code">1. Reading code</h2>
+<h2 id="collaboration-1">2. Collaboration #1</h2>
+<h2 id="collaboration-2">3. Collaboration #2</h2>
+<h2 id="version-control-git">4. Version control &amp; git</h2>
+<h2 id="best-practices-ci">5. Best practices, CI</h2>
+<p class="note">
+<p>Five parts, 30 minutes each, 5 minutes for exercises.</p>
+</section>
+<section id="goals" class="slide level1">
+<h1>Goals</h1>
+<h2 id="understand-github-start-using-it">1. Understand GitHub, start using it</h2>
+<h2 id="understand-how-git-works-what-it-can-do-for-you">2. Understand how git works, what it can do for you</h2>
+<h2 id="have-an-r-package-on-github-with-ci-code-coverage-linting">3. Have an R package on GitHub, with CI, code coverage, linting</h2>
+<h2 id="make-you-confident-that-you-can-do-it-again">4. Make you confident that you can do it again!</h2>
+</section>
+<section id="reading-code-1" class="slide level1 shout">
+<h1>1. Reading code</h1>
+</section>
+<section id="the-hardest-part-of-coding-the-right-way" class="slide level1">
+<h1>The hardest part of coding: the <em>right way</em></h1>
+<p>Sort a data frame? <em>correct</em> solution? Depends.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dd[<span class="kw">with</span>(dd, <span class="kw">order</span>(-z, b)), ]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plyr)
+<span class="kw">arrange</span>(dd, <span class="kw">desc</span>(z), b)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(data.table)
+<span class="kw">data.table</span>(dd)[<span class="kw">order</span>(-z, b)]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(taRifx)
+<span class="kw">sort</span>(dd, <span class="dt">f=</span> ~-z+b)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">doBy::<span class="kw">orderBy</span>(~<span class="st"> </span>-<span class="st"> </span>z +<span class="st"> </span>b, <span class="dt">data =</span> dd)</code></pre></div>
+<p><a href="http://stackoverflow.com/questions/1296646" class="uri">http://stackoverflow.com/questions/1296646</a></p>
+</section>
+<section id="reading-code-2" class="slide level1">
+<h1>Reading code</h1>
+<blockquote>
+<p>Programs must be written for people to read, and only incidentally for machines to execute.</p>
+</blockquote>
+<p><strong>Harold Abelson, Structure and Interpretation of Computer Programs</strong></p>
+</section>
+<section id="open-source" class="slide level1 fullpage shout">
+<h1>Open <emph>Source</emph></h1>
+<p><img src="images/source.png" class="cover height grey"></p>
+</section>
+<section id="the-github-ui" class="slide level1 fullpage shout">
+<h1>The GitHub UI</h1>
+<p class="subtitle">
+<a href="https://github.com/gaborcsardi/praise" class="uri">https://github.com/gaborcsardi/praise</a>
+</p>
+</section>
+<section id="section" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise.png" class="cover gh">
+<p class="subtitle subtitletop">
+Files
+</p>
+</section>
+<section id="section-1" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-files.png" class="cover gh">
+<p class="subtitle subtitletop">
+Files
+</p>
+</section>
+<section id="section-2" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-readme.png" class="cover gh">
+<p class="subtitle subtitletop">
+README.md
+</p>
+</section>
+<section id="section-3" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-commits.png" class="cover gh">
+<p class="subtitle subtitletop">
+Commits
+</p>
+</section>
+<section id="section-4" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-commit-ids.png" class="cover gh">
+<p class="subtitle subtitletop">
+Commit ids
+</p>
+</section>
+<section id="section-5" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-browse-1.png" class="cover gh">
+<p class="subtitle subtitletop">
+Browse files at another version
+</p>
+</section>
+<section id="section-6" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-browse-2.png" class="cover gh">
+<p class="subtitle subtitletop">
+Browse files at another version
+</p>
+</section>
+<section id="section-7" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-diff-1.png" class="cover gh">
+<p class="subtitle subtitletop">
+Diffs
+</p>
+</section>
+<section id="section-8" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-diff-2.png" class="cover gh">
+<p class="subtitle subtitletop">
+Diffs
+</p>
+</section>
+<section id="section-9" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-history-1.png" class="cover gh">
+<p class="subtitle subtitletop">
+History of files
+</p>
+</section>
+<section id="section-10" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-history-2.png" class="cover gh">
+<p class="subtitle subtitletop">
+History of files
+</p>
+</section>
+<section id="section-11" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-blame-1.png" class="cover gh">
+<p class="subtitle subtitletop">
+Blame
+</p>
+</section>
+<section id="section-12" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-blame-2.png" class="cover gh">
+<p class="subtitle subtitletop">
+Blame
+</p>
+</section>
+<section id="section-13" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-star.png" class="cover gh">
+<p class="subtitle subtitletop">
+Star
+</p>
+</section>
+<section id="section-14" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-star-2.png" class="cover gh">
+<p class="subtitle subtitletop">
+Star
+</p>
+</section>
+<section id="section-15" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-star-3.png" class="cover gh">
+<p class="subtitle subtitletop">
+Star
+</p>
+</section>
+<section id="section-16" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-search.png" class="cover gh">
+<p class="subtitle subtitletop">
+Search: find users
+</p>
+</section>
+<section id="section-17" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-search-2.png" class="cover gh">
+<p class="subtitle subtitletop">
+Search: within repository
+</p>
+</section>
+<section id="section-18" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-search-3.png" class="cover gh">
+<p class="subtitle subtitletop">
+Search: all R code
+</p>
+</section>
+<section id="section-19" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/praise-search-4.png" class="cover gh">
+<p class="subtitle subtitletop">
+Search: all CRAN packages
+</p>
+</section>
+<section id="reading-r-code" class="slide level1">
+<h1>Reading R code</h1>
+<h2 id="r-source-code-including-base-packages">R source code, including base packages</h2>
+<p><a href="https://github.com/wch/r-source" class="uri">https://github.com/wch/r-source</a></p>
+<h2 id="cran-packages">CRAN packages</h2>
+<p><a href="https://github.com/cran/*" class="uri">https://github.com/cran/*</a></p>
+<h2 id="bioconductor-packages">BioConductor packages</h2>
+<p><a href="https://github.com/bioconductor-mirror" class="uri">https://github.com/bioconductor-mirror</a></p>
+<h2 id="r-forge-packages">R-Forge packages</h2>
+<p><a href="https://github.com/rforge" class="uri">https://github.com/rforge</a></p>
+</section>
+<section id="installing-packages-from-github" class="slide level1">
+<h1>Installing packages from GitHub</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">remotes::<span class="kw">install_github</span>(<span class="st">&quot;gaborcsardi/praise&quot;</span>)</code></pre></div>
+<pre><code>Downloading GitHub repo gaborcsardi/praise@master
+Installing package into ‘/Users/gaborcsardi/r_pkgs’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘praise’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (praise)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">praise::<span class="kw">praise</span>()</code></pre></div>
+<pre><code>## [1] &quot;You are perfect!&quot;</code></pre>
+</section>
+<section id="install-remotes-using-itself" class="slide level1">
+<h1>Install remotes using itself</h1>
+<h2 id="httpsgithub.commangothecatremotesreadme"><a href="https://github.com/mangothecat/remotes#readme" class="uri">https://github.com/mangothecat/remotes#readme</a></h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base &lt;-<span class="st"> &quot;https://raw.githubusercontent.com/&quot;</span>
+repo &lt;-<span class="st"> &quot;MangoTheCat/remotes/&quot;</span>
+file &lt;-<span class="st"> &quot;master/install-github.R&quot;</span>
+url &lt;-<span class="st"> </span><span class="kw">paste0</span>(base, repo, file)
+<span class="kw">source</span>(url)$<span class="kw">value</span>(<span class="st">&quot;mangothecat/remotes&quot;</span>)</code></pre></div>
+<pre><code>Downloading GitHub repo mangothecat/remotes@master
+Installing package into ‘/Users/gaborcsardi/r_pkgs’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘remotes’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (remotes)</code></pre>
+</section>
+<section id="dependencies-to-github-packages" class="slide level1">
+<h1>Dependencies to GitHub packages</h1>
+<h2 id="use-the-remotes-field-in-description">Use the <code>Remotes</code> field in <code>DESCRIPTION</code></h2>
+<pre><code>...
+Suggests:
+    testthat
+Imports:
+    description,
+    rcmdcheck
+Remotes:
+    metacran/description,
+    mangothecat/rcmdcheck
+...</code></pre>
+<pre><code>❯ remotes::install_github(&quot;mangothecat/goodPractice&quot;)
+Downloading GitHub repo mangothecat/goodPractice@master
+Downloading GitHub repo metacran/description@master
+...</code></pre>
+</section>
+<section id="exercises" class="slide level1">
+<h1>Exercises</h1>
+<h2 id="find-your-favorite-r-developer-on-github.">1. Find your favorite R developer on GitHub.</h2>
+<h2 id="find-your-favorite-r-package-on-github.">2. Find your favorite R package on GitHub.</h2>
+<h2 id="star-it.">3. Star it.</h2>
+<h2 id="look-at-the-commit-history.">4. Look at the commit history.</h2>
+<h2 id="find-out-when-it-was-last-updated.">5. Find out when it was last updated.</h2>
+<h2 id="find-out-who-updated-it.">6. Find out who updated it.</h2>
+<h2 id="find-out-what-changed.">7. Find out what changed.</h2>
+<h2 id="install-your-favorite-r-package-using-remotes.">8. Install your favorite R package using <code>remotes</code>.</h2>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="01-reading-code_files/rmdshower/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+  
+  
+</body>
+</html>

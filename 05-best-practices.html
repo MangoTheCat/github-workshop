@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R &amp; GitHub Best Practices</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="05-best-practices_files/rmdshower/shower/node_modules/shower-mango/styles/screen-4x3.css">
+  <link rel="stylesheet" href="05-best-practices_files/rmdshower/style-common.css">
+  <link rel="stylesheet" href="05-best-practices_files/rmdshower/style-mango.css">
+  
+  
+  
+            <link rel="stylesheet" href="github-workshop.css"/>
+      
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>R &amp; GitHub Best Practices</h1>
+    <p>Gábor Csárdi</p>
+  </header>
+
+    <section class="slide level1 titlepage">
+    <h1>R &amp; GitHub Best Practices</h1>
+    <h2>Gábor Csárdi <br> <a href="mailto:gcsardi@mango-solutions.com">gcsardi@mango-solutions.com</a></h2>
+  </section>
+    
+  
+<section id="continuous-integration" class="slide level1 shout">
+<h1>Continuous Integration</h1>
+</section>
+<section id="what-is-ci" class="slide level1">
+<h1>What is CI?</h1>
+</section>
+<section id="travis" class="slide level1">
+<h1>Travis</h1>
+</section>
+<section id="register-on-travis-with-your-github-account" class="slide level1">
+<h1>Register on Travis with your GitHub account</h1>
+</section>
+<section id="set-up-travis-for-an-r-package" class="slide level1">
+<h1>Set up Travis for an R package</h1>
+</section>
+<section id="add-a-readme.md-file" class="slide level1">
+<h1>Add a <code>README.md</code> file</h1>
+</section>
+<section id="add-a-badge-to-the-readme.md-file" class="slide level1">
+<h1>Add a badge to the <code>README.md</code> file</h1>
+</section>
+<section id="exercises" class="slide level1">
+<h1>Exercises</h1>
+<h2 id="register-on-httpstravis-ci.org">1. Register on <a href="https://travis-ci.org" class="uri">https://travis-ci.org</a></h2>
+<h2 id="turn-on-travis-for-your-repository">2. Turn on Travis for your repository</h2>
+<h2 id="add-a-.travis.yml-file-to-your-repository">3. Add a <code>.travis.yml</code> file to your repository</h2>
+<h2 id="push-the-new-version-to-github">4. Push the new version to GitHub</h2>
+<h2 id="add-a-badge-to-your-readme.md-file">Add a badge to your <code>README.md</code> file</h2>
+</section>
+<section id="test-coverage" class="slide level1 shout">
+<h1>Test coverage</h1>
+</section>
+<section id="what-is-test-coverage" class="slide level1">
+<h1>What is test coverage?</h1>
+</section>
+<section id="set-up-test-coverage-runs-on-travis" class="slide level1">
+<h1>Set up test coverage runs on Travis</h1>
+</section>
+<section id="codecov" class="slide level1">
+<h1>Codecov</h1>
+</section>
+<section id="exercises-1" class="slide level1">
+<h1>Exercises</h1>
+<h2 id="add-tests-to-your-repository">1. Add tests to your repository</h2>
+<h2 id="add-code-coverage-support-on-travis">2. Add code coverage support on Travis</h2>
+<h2 id="push-the-new-version-to-github-1">3. Push the new version to GitHub</h2>
+<h2 id="add-a-badge-for-code-coverage-to-readme.md">4. Add a badge for code coverage to <code>README.md</code></h2>
+</section>
+<section id="git-branches" class="slide level1 shout">
+<h1>git Branches</h1>
+</section>
+<section id="best-practices-for-r-packages" class="slide level1 shout">
+<h1>Best Practices<br> for R packages</h1>
+</section>
+<section id="readme.md-file" class="slide level1">
+<h1><code>README.md</code> file</h1>
+</section>
+<section id="tests" class="slide level1">
+<h1>Tests</h1>
+</section>
+<section id="news.md-file" class="slide level1">
+<h1><code>NEWS.md</code> file</h1>
+</section>
+<section id="version-numbers-semantic-versioning" class="slide level1">
+<h1>Version numbers, semantic versioning</h1>
+</section>
+<section id="keep-repos-clean-use-a-.gitignore-file" class="slide level1">
+<h1>Keep repos clean, use a <code>.gitignore</code> file</h1>
+</section>
+<section id="value-busy-maintainers-time" class="slide level1">
+<h1>Value busy maintainers’ time</h1>
+<ul>
+<li class="fragment next">No +1 comments or <em>Thank you!</em> comments.</li>
+<li class="fragment next">Do not submit large pull requests without asking first.</li>
+<li class="fragment next">Comply with the repo standards. Really, do what the owner says.</li>
+<li class="fragment next">Don’t be upset if
+<ul>
+<li class="fragment next">your issue is not answered</li>
+<li class="fragment next">your PR is ignored</li>
+<li class="fragment next">you are told to change your PR</li>
+<li class="fragment next">your PR is rejected</li>
+</ul></li>
+<li class="fragment next">Friendly reminder comments are OK (private emails not!)</li>
+</ul>
+</section>
+<section id="rssatom-feeds-for-commits" class="slide level1">
+<h1>RSS/Atom feeds for commits</h1>
+</section>
+<section id="gists" class="slide level1">
+<h1>Gists</h1>
+<ul>
+<li>Public vs secret</li>
+</ul>
+</section>
+<section id="github-api" class="slide level1">
+<h1>GitHub API</h1>
+<ul>
+<li class="fragment next">Manipulating GitHub progratically</li>
+<li class="fragment next">From R: <a href="https://github.com/gaborcsardi/gh" class="uri">https://github.com/gaborcsardi/gh</a></li>
+<li class="fragment next">Get a GitHub token</li>
+<li class="fragment next">Set GITHUB_PAT environment variable</li>
+</ul>
+</section>
+<section id="not-just-code" class="slide level1">
+<h1>Not just code</h1>
+<ul>
+<li class="fragment next">git &amp; GitHub are great for R Markdown</li>
+<li class="fragment next">Data analysis, presentations, etc.</li>
+<li class="fragment next">Scientific articles (not in word)</li>
+<li class="fragment next">Anything that is text, really: see e.g. Awesome R</li>
+</ul>
+</section>
+<section id="pain-points" class="slide level1">
+<h1>Pain points</h1>
+<ul>
+<li class="fragment next">If something goes wrong, it will be hard to fix it. Just don’t tinker with the history. If you do, always make backups first.</li>
+<li class="fragment next">No code review tools with R support</li>
+<li class="fragment next">No multi-platform continuous integration support</li>
+<li class="fragment next">R package GitHub repo is also for distribution: auto-generated files are in the repository, diffs are bloated.</li>
+<li class="fragment next">Price</li>
+</ul>
+</section>
+<section id="additional-material" class="slide level1">
+<h1>Additional material</h1>
+<ul>
+<li>Software carpentry</li>
+<li>GitHub help pages</li>
+<li>Hadley Wickham’s R packages book</li>
+</ul>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="05-best-practices_files/rmdshower/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+  
+  
+</body>
+</html>

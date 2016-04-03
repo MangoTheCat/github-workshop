@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Version Control and git</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="04-version-control-and-git_files/rmdshower/shower/node_modules/shower-mango/styles/screen-4x3.css">
+  <link rel="stylesheet" href="04-version-control-and-git_files/rmdshower/style-common.css">
+  <link rel="stylesheet" href="04-version-control-and-git_files/rmdshower/style-mango.css">
+  
+  
+  
+            <link rel="stylesheet" href="github-workshop.css"/>
+      
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Version Control and git</h1>
+    <p>Gábor Csárdi</p>
+  </header>
+
+    <section class="slide level1 titlepage">
+    <h1>Version Control and git</h1>
+    <h2>Gábor Csárdi <br> <a href="mailto:gcsardi@mango-solutions.com">gcsardi@mango-solutions.com</a></h2>
+  </section>
+    
+  
+<section id="what-is-version-control" class="slide level1">
+<h1>What is version control?</h1>
+<blockquote>
+<p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</p>
+</blockquote>
+<p><strong>Pro git, by Scott Chacon and Ben Straub</strong></p>
+<p><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" class="uri">https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control</a></p>
+<!-- * Ask, “Who uses ‘undo’ in their editor?”
+  All say “Me”. ‘Undo’ is the simplest form of version control. -->
+</section>
+<section id="why-version-control" class="slide level1 shout">
+<h1>Why version control?</h1>
+</section>
+<section id="section" class="slide level1 fullpage">
+<h1></h1>
+<p><img src="images/phd101212s.png" class="cover height"></p>
+</section>
+<section id="why-version-control-1" class="slide level1">
+<h1>Why version control?</h1>
+<ul>
+<li class="fragment next">Records all changes.</li>
+<li class="fragment next">Easy to go back, and <em>undo</em>.</li>
+<li class="fragment next">Multiple version of the project, fast switching.</li>
+<li class="fragment next">Easy and disposable experimentation.</li>
+<li class="fragment next">Automatic merge.</li>
+<li class="fragment next">Conflicts are detected.</li>
+<li class="fragment next">See what has changed: diffs.</li>
+</ul>
+</section>
+<section id="github-vs.git" class="slide level1">
+<h1>GitHub vs. git</h1>
+<div class="double">
+<p class="double-flow">
+<h2 style="margin-top:-45px;">
+GitHub
+</h2>
+<ul>
+<li>Company</li>
+<li>Provides git hosting</li>
+<li>With a web interface (optional)</li>
+<li>By GitHub: Issue tracker, Pull requests, Wikis, Forks, Gists, github.com</li>
+</ul>
+</p>
+<p class="double-flow">
+<h2 id="git">git</h2>
+<ul>
+<li>Distributed version control system</li>
+<li>Free and open source</li>
+<li><strong>Not</strong> owned or developed by GitHub</li>
+<li>By git: Repositories, Branches, Remotes, Commits, Clones, Pushes, Merges, etc.</li>
+</ul>
+</p>
+</div>
+</section>
+<section id="commits-are-full-snapshots" class="slide level1">
+<h1>Commits are <em>full</em> snapshots</h1>
+<p><img src="images/commits.png" style="width:100%;"></p>
+<h2 id="every-commit-is-a-full-snapshot-of-the-project">• Every commit is a <em>full</em> snapshot of the project</h2>
+<h2 id="every-commit-has-a-40-character-long-hexadecimal-id">• Every commit has a 40 character long hexadecimal id</h2>
+<h2 id="usually-enough-to-use-first-7-characters">• Usually enough to use first ~7 characters</h2>
+</section>
+<section id="commits-are-connected-parent-commit" class="slide level1">
+<h1>Commits are connected (parent commit)</h1>
+<p><img src="images/commits-parents.png" style="width:100%"></p>
+<h2 id="every-commit-has-one-or-more-parents">• Every commit has one (or more!) parents</h2>
+<h2 id="files-that-did-not-change-just-point-their-parent">• Files that did not change just point their parent</h2>
+<h2 id="files-that-changed-have-a-brand-new-copy">• Files that changed have a brand new copy</h2>
+<h2 id="files-are-hashed">• Files are hashed</h2>
+<h2 id="each-git-repository-is-a-content-addressable-database">• Each git repository is a content addressable database</h2>
+</section>
+<section id="repository" class="slide level1">
+<h1>Repository</h1>
+<p><img src="images/commits-repository.png" style="width:100%"></p>
+<h2 id="a-repository-has-a-network-dag-of-commits">• A repository has a network (DAG) of commits</h2>
+<h2 id="and-a-set-of-labels">• And a set of labels</h2>
+<h2 id="at-least-this-is-a-good-mental-model">• At least this is a good mental model</h2>
+</section>
+<section id="clones" class="slide level1">
+<h1>Clones</h1>
+<p><img src="images/commits-clone.png" style="width:100%"></p>
+<h2 id="a-clone-is-a-complete-copy-of-a-repository">A clone is a complete copy of a repository</h2>
+</section>
+<section id="forks-github" class="slide level1">
+<h1>Forks (@ GitHub)</h1>
+<p><img src="images/commits-fork.png" style="width:100%"></p>
+<h2 id="fork-is-essentially-the-same-as-a-clone"><em>Fork</em> is essentially the same as a clone</h2>
+<h2 id="they-live-in-different-github-accounts">They live in different GitHub accounts</h2>
+</section>
+<section id="pull-requests-and-merges" class="slide level1">
+<h1>Pull requests and merges</h1>
+<p><img src="images/commits-merge-1.png" style="width:100%"></p>
+</section>
+<section id="pull-requests-and-merges-1" class="slide level1">
+<h1>Pull requests and merges</h1>
+<p><img src="images/commits-merge-2.png" style="width:100%"></p>
+</section>
+<section id="pull-requests-and-merges-2" class="slide level1">
+<h1>Pull requests and merges</h1>
+<p><img src="images/commits-merge-3.png" style="width:100%"></p>
+</section>
+<section id="pull-requests-and-merges-3" class="slide level1">
+<h1>Pull requests and merges</h1>
+<p><img src="images/commits-merge-4.png" style="width:100%"></p>
+</section>
+<section id="clean-merge" class="slide level1">
+<h1>Clean merge</h1>
+<p><img src="images/merge-clean.png" style="width:100%"></p>
+<h2 id="can-be-performed-automatically-from-the-github-ui-as-well">Can be performed automatically, from the GitHub UI as well</h2>
+</section>
+<section id="merge-conflicts" class="slide level1">
+<h1>Merge conflicts</h1>
+<p><img src="images/merge-conflict.png" style="width:100%"></p>
+<h2 id="need-to-be-done-manually-from-the-command-line">Need to be done manually, from the command line</h2>
+</section>
+<section id="merge-conflicts-1" class="slide level1">
+<h1>Merge conflicts</h1>
+<pre><code>First line is the same
+Second line is the same
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; F2
+F2 added three lines here: one
+This is F2 / two
+This is F2 / three
+=======
+F1 added two lines here: one
+This is F1 / two
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; F1
+And the other four lines are the same.
+They did not change at all
+Penultimate line
+Last line, still unchanged.</code></pre>
+<h2 id="edit-the-file-clean-it-up-and-then-git-add-and-git-commit">Edit the file, clean it up, and then <code>git add</code> and <code>git commit</code></h2>
+</section>
+<section id="after-the-merge" class="slide level1">
+<h1>After the merge</h1>
+<p><img src="images/commits-merge-5.png" style="width:100%"></p>
+<h2 id="note-that-this-is-not-a-symmetric-operation">Note that this is not a symmetric operation</h2>
+</section>
+<section id="command-line-git" class="slide level1 shout">
+<h1>Command line git</h1>
+</section>
+<section id="command-line-git-windows" class="slide level1">
+<h1>Command line git, Windows</h1>
+<p><img src="images/git-windows.png" style="width:100%"></p>
+</section>
+<section id="command-line-git-os-x-and-linux" class="slide level1">
+<h1>Command line git, OS X and Linux</h1>
+<p><img src="images/git-terminal.png" style="width:100%"></p>
+</section>
+<section id="navigation-in-the-shell" class="slide level1">
+<h1>Navigation in the shell</h1>
+<h2 id="current-working-directory-wd">Current working directory (WD)</h2>
+<pre class="shell"><code>pwd</code></pre>
+<h2 id="change-working-directory-down">Change working directory (down)</h2>
+<pre class="shell"><code>cd &lt;directory&gt;</code></pre>
+<h2 id="change-working-directory-up">Change working directory (up)</h2>
+<pre class="shell"><code>cd ..</code></pre>
+<h2 id="list-directories-and-files-in-the-wd">List directories and files in the WD</h2>
+<pre class="shell"><code>ls</code></pre>
+</section>
+<section id="command-line-git-1" class="slide level1">
+<h1>Command line git</h1>
+<h2 id="section-1"></h2>
+<h2 id="all-git-commands-start-with-git">All git commands start with <code>git</code></h2>
+<pre class="shell"><code>git &lt;command&gt; &lt;options&gt;</code></pre>
+<h2 id="set-the-wd-witin-the-project">Set the WD witin the project</h2>
+<pre class="shell"><code>cd &lt;project-directory&gt;
+git &lt;command&gt; &lt;options&gt;</code></pre>
+</section>
+<section id="clone-a-project-from-github" class="slide level1">
+<h1>Clone a project from GitHub</h1>
+<p><img src="images/github-clone-url.png" style="width:100%"></p>
+<pre class="shell"><code>git clone https://github.com/&lt;username&gt;/&lt;repo&gt;
+cd &lt;repo&gt;
+git status</code></pre>
+</section>
+<section id="exercises" class="slide level1">
+<h1>Exercises</h1>
+<h2 id="start-the-git-shell">1. Start the git shell</h2>
+<h2 id="clone-your-copy-of-the-praise-repository">2. Clone your copy of the <code>praise</code> repository</h2>
+<h2 id="change-working-directory-to-the-cloned-praise-directory">3. Change working directory to the cloned <code>praise</code> directory</h2>
+<h2 id="run-the-git-status-command">4. Run the <code>git status</code> command</h2>
+</section>
+<section id="creating-a-new-project" class="slide level1 shout">
+<h1>Creating a new project</h1>
+</section>
+<section id="open-project-in-r-studio" class="slide level1">
+<h1>Open project in R Studio</h1>
+<p><img src="images/rs-git-1.png" style="width:100%"></p>
+</section>
+<section id="browse-history" class="slide level1">
+<h1>Browse history</h1>
+<p><img src="images/rs-git-2.png" style="width:100%"></p>
+</section>
+<section id="make-some-changes" class="slide level1 shout">
+<h1>Make some changes</h1>
+</section>
+<section id="section-2" class="slide level1 fullpage">
+<h1></h1>
+<p><img src="images/rs-git-3.png" class="cover gh"></p>
+</section>
+<section id="section-3" class="slide level1 fullpage">
+<h1></h1>
+<p><img src="images/rs-git-4.png" class="cover gh"></p>
+</section>
+<section id="see-the-diff" class="slide level1">
+<h1>See the diff</h1>
+<p><img src="images/rs-git-5.png" style="width:100%"></p>
+</section>
+<section id="section-4" class="slide level1 fullpage">
+<h1></h1>
+<p><img src="images/rs-git-6.png" class="cover gh"></p>
+</section>
+<section id="commit-your-changes" class="slide level1 shout">
+<h1>Commit your changes</h1>
+</section>
+<section id="section-5" class="slide level1 fullpage">
+<h1></h1>
+<p><img src="images/rs-git-7.png" class="cover gh"></p>
+</section>
+<section id="push-your-changes-to-github" class="slide level1">
+<h1>Push your changes to GitHub</h1>
+<p><img src="images/rs-git-8.png" style="width:100%"></p>
+</section>
+<section id="exercises-1" class="slide level1">
+<h1>Exercises</h1>
+<h2 id="start-r-studio">1. Start R Studio</h2>
+<h2 id="open-the-praise-project">2. Open the <code>praise</code> project</h2>
+<h2 id="look-at-the-commit-history">3. Look at the commit history</h2>
+<h2 id="edit-a-file">4. Edit a file</h2>
+<h2 id="commit-your-changes-1">5. Commit your changes</h2>
+<h2 id="push-the-new-version-to-github">6. Push the new version to GitHub</h2>
+</section>
+<section id="creating-repository-at-github" class="slide level1">
+<h1>Creating repository at GitHub</h1>
+<p><img src="images/github-new-repo-1.png" style="width:100%"></p>
+</section>
+<section id="section-6" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/github-new-repo-2.png" class="cover gh">
+<p class="subtitle subtitletop">
+New repository
+</p>
+</section>
+<section id="section-7" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/github-new-repo-3.png" class="cover gh">
+<p class="subtitle subtitletop">
+New repository
+</p>
+</section>
+<section id="create-r-studio-project-locally" class="slide level1">
+<h1>Create R Studio project locally</h1>
+<p><img src="images/github-new-repo-4.png" style="height:70%"></p>
+</section>
+<section id="create-r-studio-project-locally-1" class="slide level1">
+<h1>Create R Studio project locally</h1>
+<p><img src="images/github-new-repo-5.png" style="width:70%"></p>
+</section>
+<section id="create-r-studio-project-locally-2" class="slide level1">
+<h1>Create R Studio project locally</h1>
+<p><img src="images/github-new-repo-6.png" style="width:70%"></p>
+</section>
+<section id="create-r-studio-project-locally-3" class="slide level1">
+<h1>Create R Studio project locally</h1>
+<p><img src="images/github-new-repo-7.png" style="width:70%"></p>
+</section>
+<section id="initial-commit" class="slide level1">
+<h1>Initial commit</h1>
+<p><img src="images/github-new-repo-8.png" style="width:70%"></p>
+</section>
+<section id="section-8" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/github-new-repo-3.png" class="cover gh">
+<p class="subtitle subtitletop">
+New repository
+</p>
+</section>
+<section id="add-project-to-the-new-github-repository" class="slide level1">
+<h1>Add project to the new GitHub repository</h1>
+<pre class="shell"><code>git remote add origin https://github.com/gaborcsardi/argh.git
+git push -u origin master</code></pre>
+</section>
+<section id="section-9" class="slide level1 fullpage">
+<h1></h1>
+<img src="images/github-new-repo-9.png" class="cover gh">
+<p class="subtitle subtitletop">
+New repository
+</p>
+</section>
+<section id="exercises-2" class="slide level1">
+<h1>Exercises</h1>
+<h2 id="create-a-repository-at-github">1. Create a repository at GitHub</h2>
+<h2 id="create-an-r-studio-project-locally">2. Create an R Studio project locally</h2>
+<h2 id="push-your-r-studio-project-to-github">3. Push your R Studio project to GitHub</h2>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="04-version-control-and-git_files/rmdshower/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+  
+  
+</body>
+</html>
