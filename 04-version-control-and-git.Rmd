@@ -128,7 +128,7 @@ https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 
 <img src="merge-clean.png" style="width:100%">
 
-## Can be performed automatically, From the GitHub UI as well
+## Can be performed automatically, from the GitHub UI as well
 
 # Merge conflicts
 
@@ -156,6 +156,12 @@ Last line, still unchanged.
 ```
 
 ## Edit the file, clean it up, and then `git add` and `git commit`
+
+# After the merge
+
+<img src="commits-merge-5.png" style="width:100%">
+
+## Note that this is not a symmetric operation
 
 # Command line git { .shout }
 
