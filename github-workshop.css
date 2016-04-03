@@ -23,3 +23,6 @@ p.subtitletop {
 img.gh {
     margin-top: 30px;
 }
+blockquote p {
+    font-size: 150%;
+}
