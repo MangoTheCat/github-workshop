@@ -9,6 +9,7 @@ output:
     self_contained: false
     theme: mango
     keep_md: true
+    css: github-workshop.css
 ---
 
 # Continuous Integration
