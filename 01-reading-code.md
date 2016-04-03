@@ -7,9 +7,9 @@ Gábor Csárdi
 
 ## 1. Reading code
 ## 2. Collaboration #1
-## 3. Version control & git
-## 4. Collaboration #2
-## 5. Best practices
+## 3. Collaboration #2
+## 4. Version control & git
+## 5. Best practices, CI
 
 <p class="note">Five parts, 30 minutes each, 5 minutes for exercises.
 
@@ -191,7 +191,7 @@ praise::praise()
 ```
 
 ```
-## [1] "You are priceless!"
+## [1] "You are luminous!"
 ```
 
 # Install remotes using itself
