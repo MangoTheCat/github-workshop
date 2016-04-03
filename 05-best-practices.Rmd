@@ -12,89 +12,109 @@ output:
     css: github-workshop.css
 ---
 
-# Continuous Integration
+# Continuous Integration { .shout }
 
-## Concept
+# What is CI?
 
-## Travis
+# Travis
 
-## Set it up for an R package
+# Register on Travis with your GitHub account
 
-# Test coverage
+# Set up Travis for an R package
 
-## Concept
+# Add a `README.md` file
 
-## Set it up on Travis
+# Add a badge to the `README.md` file
 
-# Best Practices
+# Exercises
 
-# What to include in the package
+## 1. Register on https://travis-ci.org
 
-## Tests
+## 2. Turn on Travis for your repository
 
-## README.md file
+## 3. Add a `.travis.yml` file to your repository
 
-## NEWS.md file
+## 4. Push the new version to GitHub
 
-## Version numbers, semantic versioning
+## Add a badge to your `README.md` file
 
-## Keep repos clean, use a .gitignore file
+# Test coverage { .shout }
 
-## Collaborate with yourself
+# What is test coverage?
 
-## Use cross-references in comments, issues, commit messages
+# Set up test coverage runs on Travis
 
-* Close an issue with a commit message
-* Value other people's time:
-  - No +1 comments (although now this is better)
-  - No thank you comments!
-  - No unneeded references to commits and issues
-  - Do not submit large pull requests without asking the owner(s)
-    if they want them
-  - Comply with the repo standards. Really, do what the owner says.
-    (They will have to manage this code in the future.)
-  - Contributions as the owner sees them: more shitty code to maintain
-  - As the contributor sees them: I am adding this cool feature
-  - Don't be upset if
-    o your issue is not answered
-    o your PR is ignored
-	o you are told to change your PR
-	o your PR is rejected
-  - It is OK to make a friendly reminder comment, or two
-	(usually not OK, to email privately!)
+# Codecov
 
-## RSS/Atom feeds for commits
+# Exercises
 
-## Gists
+## 1. Add tests to your repository
+
+## 2. Add code coverage support on Travis
+
+## 3. Push the new version to GitHub
+
+## 4. Add a badge for code coverage to `README.md`
+
+# git Branches { .shout }
+
+# Best Practices<br> for R packages { .shout }
+
+# `README.md` file
+
+# Tests
+
+# `NEWS.md` file
+
+# Version numbers, semantic versioning
+
+# Keep repos clean, use a `.gitignore` file
+
+# Value busy maintainers' time
+
+> * No +1 comments or *Thank you!* comments.
+> * Do not submit large pull requests without asking first.
+> * Comply with the repo standards. Really, do what the owner says.
+> * Don't be upset if
+>     - your issue is not answered
+>     - your PR is ignored
+>     - you are told to change your PR
+>     - your PR is rejected
+> * Friendly reminder comments are OK (private emails not!)
+
+# RSS/Atom feeds for commits
+
+# Gists
 
 * Public vs secret
 
-## GitHub API
+# GitHub API
 
-* Manipulating GitHub using gaborcsardi/gh
-* Get a GitHub token
-* GITHUB_PAT environment variable
+> * Manipulating GitHub progratically
+> * From R: https://github.com/gaborcsardi/gh
+> * Get a GitHub token
+> * Set GITHUB_PAT environment variable
 
-## Not just code
+# Not just code
 
-* Why git & GitHub is great for R Markdown
-* Presentations
-* Scientific articles (not in word)
-* Anything that is text, really: Awesome R
+> * git & GitHub are great for R Markdown
+> * Data analysis, presentations, etc.
+> * Scientific articles (not in word)
+> * Anything that is text, really: see e.g. Awesome R
 
-## Pain points
+# Pain points
 
-* If something goes wrong, it will be hard to fix it.
-  Just don't tinker with the history. If you do, always
-  make backups first.
-* No code review tools with R support
-* No multi-platform continuous integration support
-* R package GitHub repo is also for distribution:
-  auto-generated files are in the repository,
-  diffs are bloated.
-* Price
+> * If something goes wrong, it will be hard to fix it.
+>   Just don't tinker with the history. If you do, always
+>   make backups first.
+> * No code review tools with R support
+> * No multi-platform continuous integration support
+> * R package GitHub repo is also for distribution:
+>   auto-generated files are in the repository,
+>   diffs are bloated.
+> * Price
 
-## Additional material
+# Additional material
 
 * Software carpentry
 * GitHub help pages
