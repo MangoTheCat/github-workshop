@@ -229,27 +229,35 @@ git status
 
 # Open project in R Studio
 
-TODO
+<img src="rs-git-1.png" style="width:100%">
 
 # Browse history
 
-TODO
+<img src="rs-git-2.png" style="width:100%">
 
-# Edit a file
+# Make some changes { .shout }
 
-TODO
+# { .fullpage }
+<img src="rs-git-3.png" class="cover gh">
+
+# { .fullpage }
+<img src="rs-git-4.png" class="cover gh">
 
 # See the diff
 
-TODO
+<img src="rs-git-5.png" style="width:100%">
 
-# Commit your changes
+# { .fullpage }
+<img src="rs-git-6.png" class="cover gh">
 
-TODO
+# Commit your changes {.shout }
+
+# { .fullpage }
+<img src="rs-git-7.png" class="cover gh">
 
 # Push your changes to GitHub
 
-TODO
+<img src="rs-git-8.png" style="width:100%">
 
 # Exercises
 
