@@ -1,4 +1,4 @@
-# Version Control and git
+# Collaboration on GitHub #2
 Gábor Csárdi  
 
 # Pull requests { .shout }

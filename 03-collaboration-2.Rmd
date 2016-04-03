@@ -1,5 +1,5 @@
 ---
-title: "Version Control and git"
+title: "Collaboration on GitHub #2"
 author: "Gábor Csárdi"
 email: "gcsardi@mango-solutions.com"
 maketitle: true
