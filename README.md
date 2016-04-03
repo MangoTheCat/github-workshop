@@ -1,5 +1,5 @@
 
-# R Development Using GitHub (work in progress)
+# R Development Using GitHub
 
 > Workshop presented at the London R meeting, April 5th, 2016
 
