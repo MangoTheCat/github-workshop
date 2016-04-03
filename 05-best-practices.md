@@ -5,15 +5,75 @@ Gábor Csárdi
 
 # What is CI?
 
-# Travis
+> Continuous integration (CI) is the practice, in software engineering,
+> of merging all developer working copies to a shared mainline
+> several times a day.
 
-# Register on Travis with your GitHub account
+**Wikipedia** https://en.wikipedia.org/wiki/Continuous_integration
+
+# What is CI?
+
+<img src="images/travis-ci-github.png" style="width:100%">
+
+# Travis CI { .shout }
+<p class="subtitle">https://travis-ci.org/</p>
+
+# { .fullpage }
+<img class="cover gh" src="images/travis-1.png">
+<p class="subtitle subtitletop">https://travis-ci.org/</p>
+
+# { .fullpage }
+<img class="cover gh" src="images/travis-2.png">
+<p class="subtitle subtitletop">Login with GitHub</p>
+
+# { .fullpage }
+<img class="cover gh" src="images/travis-3.png">
+<p class="subtitle subtitletop">Add a repository</p>
+
+# { .fullpage }
+<img class="cover gh" src="images/travis-4.png">
+<p class="subtitle subtitletop">Choose repository to add</p>
+
+# { .fullpage }
+<img class="cover gh" src="images/travis-5.png">
+<p class="subtitle subtitletop">Build history (empty)</p>
+
+# { .fullpage }
+<img class="cover gh" src="images/travis-6.png">
+<p class="subtitle subtitletop">Build history</p>
+
+# { .fullpage }
+<img class="cover gh" src="images/travis-7.png">
+<p class="subtitle subtitletop">Build output</p>
 
 # Set up Travis for an R package
 
-# Add a `README.md` file
+## 1. Create `.travis.yml` file:
 
-# Add a badge to the `README.md` file
+```
+language: R
+sudo: false
+cache: packages
+```
+
+## 2. Add it to the repository
+
+## 3. Omit it from the R package, create `.Rbuildignore`:
+
+```
+^\.travis\.yml$
+```
+
+## 4. Commit and push
+
+# Add a `README.md` file, and a badge:
+
+```markdown
+[![Build Status](https://travis-ci.org/<user>/<repo>.svg?branch=master)]
+(https://travis-ci.org/<user>/<repo>)
+```
+
+<img src="images/travis-badge.png" style="width:100%">
 
 # Exercises
 
@@ -25,19 +85,46 @@ Gábor Csárdi
 
 ## 4. Push the new version to GitHub
 
-## Add a badge to your `README.md` file
+## 5. Add a badge to your `README.md` file
 
 # Test coverage { .shout }
 
 # What is test coverage?
 
+> Code coverage is a measure of the amount of
+> code being exercised by the tests. It is an indirect measure of test quality.
+
+**Jim Hester**, `covr` package author
+
 # Set up test coverage runs on Travis
 
-# Codecov
+## Extend your `.travis.yml` file:
+
+```
+...
+r_github_packages:
+  - jimhester/covr
+
+warnings_are_errors: true
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+
+after_success:
+  - Rscript -e 'covr::codecov()'
+```
+  
+# Codecov { .shout }
+
+# { .fullpage}
+<img class="cover gh" src="images/codecov.png">
+<p class="subtitle subtitletop">https://codecov.io/{user}/{repo}</p>
 
 # Exercises
 
-## 1. Add tests to your repository
+## 1. Add (dummy?) tests to your repository
 
 ## 2. Add code coverage support on Travis
 
@@ -45,19 +132,25 @@ Gábor Csárdi
 
 ## 4. Add a badge for code coverage to `README.md`
 
-# git Branches { .shout }
+<!-- # git Branches { .shout } -->
 
 # Best Practices<br> for R packages { .shout }
 
-# `README.md` file
+# { .fullpage }
+<img class="cover gh" src="images/tests.png">
+<p class="subtitle subtitletop">Tests</p>
 
-# Tests
+# { .fullpage }
+<img class="cover gh" src="images/praise-readme.png">
+<p class="subtitle subtitletop">`README.md` file</p>
 
-# `NEWS.md` file
+# { .fullpage }
+<img class="cover gh" src="images/news.png">
+<p class="subtitle subtitletop">`NEWS.md` file</p>
 
-# Version numbers, semantic versioning
+<!-- # Version numbers, semantic versioning -->
 
-# Keep repos clean, use a `.gitignore` file
+<!-- # Keep repos clean, use a `.gitignore` file -->
 
 # Value busy maintainers' time
 
@@ -71,11 +164,11 @@ Gábor Csárdi
 >     - your PR is rejected
 > * Friendly reminder comments are OK (private emails not!)
 
-# RSS/Atom feeds for commits
+<!-- # RSS/Atom feeds for commits -->
 
-# Gists
+<!-- # Gists -->
 
-* Public vs secret
+<!-- * Public vs secret -->
 
 # GitHub API
 
@@ -105,6 +198,14 @@ Gábor Csárdi
 
 # Additional material
 
-* Software carpentry
-* GitHub help pages
-* Hadley Wickham's R packages book
+## Software carpentry:
+
+http://swcarpentry.github.io/git-novice/
+
+## GitHub help pages
+
+https://help.github.com/
+
+## Hadley Wickham's R packages book
+
+http://r-pkgs.had.co.nz/git.html

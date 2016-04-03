@@ -17,7 +17,7 @@ Gábor Csárdi
 
 ## 1. Understand GitHub, start using it
 ## 2. Understand how git works, what it can do for you
-## 3. Have an R package on GitHub, with CI, code coverage, linting
+## 3. Have an R package on GitHub, with CI, code coverage
 ## 4. Make you confident that you can do it again!
 
 # 1. Reading code { .shout }
@@ -191,7 +191,7 @@ praise::praise()
 ```
 
 ```
-## [1] "You are perfect!"
+## [1] "You are finest!"
 ```
 
 # Install remotes using itself
