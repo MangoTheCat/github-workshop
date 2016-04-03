@@ -4,43 +4,43 @@ Gábor Csárdi
 # Pull requests { .shout }
 
 # { .fullpage }
-<img src="praise-pr-1.png" class="cover gh">
+<img src="images/praise-pr-1.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # { .fullpage }
-<img src="praise-pr-2.png" class="cover gh">
+<img src="images/praise-pr-2.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # { .fullpage }
-<img src="praise-pr-3.png" class="cover gh">
+<img src="images/praise-pr-3.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # { .fullpage }
-<img src="praise-pr-5.png" class="cover gh">
+<img src="images/praise-pr-5.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # { .fullpage }
-<img src="praise-pr-4.png" class="cover gh">
+<img src="images/praise-pr-4.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # { .fullpage }
-<img src="praise-pr-6.png" class="cover gh">
+<img src="images/praise-pr-6.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # { .fullpage }
-<img src="praise-pr-7.png" class="cover gh">
+<img src="images/praise-pr-7.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # { .fullpage }
-<img src="praise-pr-8.png" class="cover gh">
+<img src="images/praise-pr-8.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # { .fullpage }
-<img src="praise-pr-9.png" class="cover gh">
+<img src="images/praise-pr-9.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # { .fullpage }
-<img src="praise-pr-10.png" class="cover gh">
+<img src="images/praise-pr-10.png" class="cover gh">
 <p class="subtitle subtitletop">Pull requests</p>
 
 # Pull request summary for contributor

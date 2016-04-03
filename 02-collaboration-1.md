@@ -4,19 +4,19 @@ Gábor Csárdi
 # Issues { .shout }
 
 # { .fullpage }
-<img src="praise-issues-1.png" class="cover gh">
+<img src="images/praise-issues-1.png" class="cover gh">
 <p class="subtitle subtitletop">https://github.com/gaborcsardi/praise/issues</p>
 
 # { .fullpage }
-<img src="praise-issues-2.png" class="cover gh">
+<img src="images/praise-issues-2.png" class="cover gh">
 <p class="subtitle subtitletop">https://github.com/gaborcsardi/praise/issues</p>
 
 # { .fullpage }
-<img src="praise-issue-comments.png" class="cover gh">
+<img src="images/praise-issue-comments.png" class="cover gh">
 <p class="subtitle subtitletop">Issue comments</p>
 
 # { .fullpage }
-<img src="praise-issue-comments-markdown.png" class="cover gh">
+<img src="images/praise-issue-comments-markdown.png" class="cover gh">
 <p class="subtitle subtitletop">Markdown in issue comments</p>
 
 # GitHub Issues features
@@ -31,61 +31,61 @@ Gábor Csárdi
 # Following people (in a good way) { .shout }
 
 # { .fullpage }
-<img src="follow.png" class="cover gh">
+<img src="images/follow.png" class="cover gh">
 <p class="subtitle subtitletop">Following</p>
 
 # News feed { .shout }
 
 # { .fullpage }
-<img src="newsfeed.png" class="cover gh">
+<img src="images/newsfeed.png" class="cover gh">
 <p class="subtitle subtitletop">News feed</p>
 
 # Contributing code { .shout }
 
 # { .fullpage }
-<img src="praise-readme.png" class="cover gh">
+<img src="images/praise-readme.png" class="cover gh">
 <p class="subtitle subtitletop">The `praise` package</p>
 
 # { .fullpage }
-<img src="praise-code.png" class="cover gh">
+<img src="images/praise-code.png" class="cover gh">
 <p class="subtitle subtitletop">The `praise` package: code & words</p>
 
 # { .fullpage }
-<img src="praise-code-2.png" class="cover gh">
+<img src="images/praise-code-2.png" class="cover gh">
 <p class="subtitle subtitletop">The `praise` package: code</p>
 
 # { .fullpage }
-<img src="praise-words.png" class="cover gh">
+<img src="images/praise-words.png" class="cover gh">
 <p class="subtitle subtitletop">The `praise` package: words</p>
 
 # Small fixes { .shout }
 
 # { .fullpage }
-<img src="praise-words-edit.png" class="cover gh">
+<img src="images/praise-words-edit.png" class="cover gh">
 <p class="subtitle subtitletop">Edit a file on GitHub</p>
 
 # { .fullpage }
-<img src="praise-words-edit-2.png" class="cover gh">
+<img src="images/praise-words-edit-2.png" class="cover gh">
 <p class="subtitle subtitletop">Edit a file on GitHub</p>
 
 # { .fullpage }
-<img src="link-to-commit.png" class="cover gh">
+<img src="images/link-to-commit.png" class="cover gh">
 <p class="subtitle subtitletop">Referencing commits in issues</p>
 
 # { .fullpage }
-<img src="link-to-issue.png" class="cover gh">
+<img src="images/link-to-issue.png" class="cover gh">
 <p class="subtitle subtitletop">Referencing issues in commits</p>
 
 # { .fullpage }
-<img src="praise-close-issue.png" class="cover gh">
+<img src="images/praise-close-issue.png" class="cover gh">
 <p class="subtitle subtitletop">Close issues with commit messages</p>
 
 # { .fullpage }
-<img src="praise-fork.png" class="cover gh">
+<img src="images/praise-fork.png" class="cover gh">
 <p class="subtitle subtitletop">Fork</p>
 
 # { .fullpage }
-<img src="praise-fork-2.png" class="cover gh">
+<img src="images/praise-fork-2.png" class="cover gh">
 <p class="subtitle subtitletop">Fork</p>
 
 # Writing good issues
@@ -102,7 +102,7 @@ Gábor Csárdi
 
 # Writing good commit messages
 
-<img src="xkcd-commits.png" style="width:100%">
+<img src="images/xkcd-commits.png" style="width:100%">
 
 # Writing good commit messages
 

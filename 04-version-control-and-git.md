@@ -17,7 +17,7 @@ https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 
 # { .fullpage }
 
-<img src="phd101212s.png" class="cover height">
+<img src="images/phd101212s.png" class="cover height">
 
 # Why version control?
 
@@ -51,7 +51,7 @@ https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 
 # Commits are *full* snapshots
 
-<img src="commits.png" style="width:100%;">
+<img src="images/commits.png" style="width:100%;">
 
 ## &bullet; Every commit is a *full* snapshot of the project
 
@@ -61,7 +61,7 @@ https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 
 # Commits are connected (parent commit)
 
-<img src="commits-parents.png" style="width:100%">
+<img src="images/commits-parents.png" style="width:100%">
 
 ## &bullet; Every commit has one (or more!) parents
 
@@ -75,7 +75,7 @@ https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 
 # Repository
 
-<img src="commits-repository.png" style="width:100%">
+<img src="images/commits-repository.png" style="width:100%">
 
 ## &bullet; A repository has a network (DAG) of commits
 
@@ -85,13 +85,13 @@ https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 
 # Clones
 
-<img src="commits-clone.png" style="width:100%">
+<img src="images/commits-clone.png" style="width:100%">
 
 ## A clone is a complete copy of a repository
 
 # Forks (@ GitHub)
 
-<img src="commits-fork.png" style="width:100%">
+<img src="images/commits-fork.png" style="width:100%">
 
 ## *Fork* is essentially the same as a clone
 
@@ -99,29 +99,29 @@ https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 
 # Pull requests and merges
 
-<img src="commits-merge-1.png" style="width:100%">
+<img src="images/commits-merge-1.png" style="width:100%">
 
 # Pull requests and merges
 
-<img src="commits-merge-2.png" style="width:100%">
+<img src="images/commits-merge-2.png" style="width:100%">
 
 # Pull requests and merges
 
-<img src="commits-merge-3.png" style="width:100%">
+<img src="images/commits-merge-3.png" style="width:100%">
 
 # Pull requests and merges
 
-<img src="commits-merge-4.png" style="width:100%">
+<img src="images/commits-merge-4.png" style="width:100%">
 
 # Clean merge
 
-<img src="merge-clean.png" style="width:100%">
+<img src="images/merge-clean.png" style="width:100%">
 
 ## Can be performed automatically, from the GitHub UI as well
 
 # Merge conflicts
 
-<img src="merge-conflict.png" style="width:100%">
+<img src="images/merge-conflict.png" style="width:100%">
 
 ## Need to be done manually, from the command line
 
@@ -148,7 +148,7 @@ Last line, still unchanged.
 
 # After the merge
 
-<img src="commits-merge-5.png" style="width:100%">
+<img src="images/commits-merge-5.png" style="width:100%">
 
 ## Note that this is not a symmetric operation
 
@@ -156,11 +156,11 @@ Last line, still unchanged.
 
 # Command line git, Windows
 
-<img src="git-windows.png" style="width:100%">
+<img src="images/git-windows.png" style="width:100%">
 
 # Command line git, OS X and Linux
 
-<img src="git-terminal.png" style="width:100%">
+<img src="images/git-terminal.png" style="width:100%">
 
 # Navigation in the shell
 
@@ -207,7 +207,7 @@ git <command> <options>
 
 # Clone a project from GitHub
 
-<img src="github-clone-url.png" style="width:100%">
+<img src="images/github-clone-url.png" style="width:100%">
 
 ```shell
 git clone https://github.com/<username>/<repo>
@@ -229,35 +229,35 @@ git status
 
 # Open project in R Studio
 
-<img src="rs-git-1.png" style="width:100%">
+<img src="images/rs-git-1.png" style="width:100%">
 
 # Browse history
 
-<img src="rs-git-2.png" style="width:100%">
+<img src="images/rs-git-2.png" style="width:100%">
 
 # Make some changes { .shout }
 
 # { .fullpage }
-<img src="rs-git-3.png" class="cover gh">
+<img src="images/rs-git-3.png" class="cover gh">
 
 # { .fullpage }
-<img src="rs-git-4.png" class="cover gh">
+<img src="images/rs-git-4.png" class="cover gh">
 
 # See the diff
 
-<img src="rs-git-5.png" style="width:100%">
+<img src="images/rs-git-5.png" style="width:100%">
 
 # { .fullpage }
-<img src="rs-git-6.png" class="cover gh">
+<img src="images/rs-git-6.png" class="cover gh">
 
 # Commit your changes {.shout }
 
 # { .fullpage }
-<img src="rs-git-7.png" class="cover gh">
+<img src="images/rs-git-7.png" class="cover gh">
 
 # Push your changes to GitHub
 
-<img src="rs-git-8.png" style="width:100%">
+<img src="images/rs-git-8.png" style="width:100%">
 
 # Exercises
 
@@ -275,43 +275,41 @@ git status
 
 # Creating repository at GitHub
 
-<img src="github-new-repo-1.png" style="width:100%">
+<img src="images/github-new-repo-1.png" style="width:100%">
 
 # { .fullpage }
-<img src="github-new-repo-2.png" class="cover gh">
+<img src="images/github-new-repo-2.png" class="cover gh">
 <p class="subtitle subtitletop">New repository</p>
 
 # { .fullpage }
-<img src="github-new-repo-3.png" class="cover gh">
+<img src="images/github-new-repo-3.png" class="cover gh">
 <p class="subtitle subtitletop">New repository</p>
 
 # Create R Studio project locally
 
-<img src="github-new-repo-4.png" style="height:70%">
+<img src="images/github-new-repo-4.png" style="height:70%">
 
 # Create R Studio project locally
 
-<img src="github-new-repo-5.png" style="width:70%">
+<img src="images/github-new-repo-5.png" style="width:70%">
 
 # Create R Studio project locally
 
-<img src="github-new-repo-6.png" style="width:70%">
+<img src="images/github-new-repo-6.png" style="width:70%">
 
 # Create R Studio project locally
 
-<img src="github-new-repo-7.png" style="width:70%">
+<img src="images/github-new-repo-7.png" style="width:70%">
 
 # Initial commit
 
-<img src="github-new-repo-8.png" style="width:70%">
+<img src="images/github-new-repo-8.png" style="width:70%">
 
 # { .fullpage }
-<img src="github-new-repo-3.png" class="cover gh">
+<img src="images/github-new-repo-3.png" class="cover gh">
 <p class="subtitle subtitletop">New repository</p>
 
 # Add project to the new GitHub repository
-
-<img src="github-new-repo-10.png" style="width:100%">
 
 ```shell
 git remote add origin https://github.com/gaborcsardi/argh.git
@@ -319,7 +317,7 @@ git push -u origin master
 ```
 
 # { .fullpage }
-<img src="github-new-repo-9.png" class="cover gh">
+<img src="images/github-new-repo-9.png" class="cover gh">
 <p class="subtitle subtitletop">New repository</p>
 
 # Exercises

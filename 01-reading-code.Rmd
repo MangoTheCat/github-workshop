@@ -73,90 +73,90 @@ http://stackoverflow.com/questions/1296646
 
 # Open <emph>Source</emph> { .fullpage .shout }
 
-<img src="source.png" class="cover height grey">
+<img src="images/source.png" class="cover height grey">
 
 # The GitHub UI { .fullpage .shout }
 
 <p class="subtitle"> https://github.com/gaborcsardi/praise </p>
 
 # { .fullpage }
-<img src="praise.png" class="cover gh">
+<img src="images/praise.png" class="cover gh">
 <p class="subtitle subtitletop">Files</p>
 
 # { .fullpage }
-<img src="praise-files.png" class="cover gh">
+<img src="images/praise-files.png" class="cover gh">
 <p class="subtitle subtitletop">Files</p>
 
 # { .fullpage }
-<img src="praise-readme.png" class="cover gh">
+<img src="images/praise-readme.png" class="cover gh">
 <p class="subtitle subtitletop">README.md</p>
 
 # { .fullpage }
-<img src="praise-commits.png" class="cover gh">
+<img src="images/praise-commits.png" class="cover gh">
 <p class="subtitle subtitletop">Commits</p>
 
 # { .fullpage }
-<img src="praise-commit-ids.png" class="cover gh">
+<img src="images/praise-commit-ids.png" class="cover gh">
 <p class="subtitle subtitletop">Commit ids</p>
 
 # { .fullpage }
-<img src="praise-browse-1.png" class="cover gh">
+<img src="images/praise-browse-1.png" class="cover gh">
 <p class="subtitle subtitletop">Browse files at another version</p>
 
 # { .fullpage }
-<img src="praise-browse-2.png" class="cover gh">
+<img src="images/praise-browse-2.png" class="cover gh">
 <p class="subtitle subtitletop">Browse files at another version</p>
 
 # { .fullpage }
-<img src="praise-diff-1.png" class="cover gh">
+<img src="images/praise-diff-1.png" class="cover gh">
 <p class="subtitle subtitletop">Diffs</p>
 
 # { .fullpage }
-<img src="praise-diff-2.png" class="cover gh">
+<img src="images/praise-diff-2.png" class="cover gh">
 <p class="subtitle subtitletop">Diffs</p>
 
 # { .fullpage }
-<img src="praise-history-1.png" class="cover gh">
+<img src="images/praise-history-1.png" class="cover gh">
 <p class="subtitle subtitletop">History of files</p>
 
 # { .fullpage }
-<img src="praise-history-2.png" class="cover gh">
+<img src="images/praise-history-2.png" class="cover gh">
 <p class="subtitle subtitletop">History of files</p>
 
 # { .fullpage }
-<img src="praise-blame-1.png" class="cover gh">
+<img src="images/praise-blame-1.png" class="cover gh">
 <p class="subtitle subtitletop">Blame</p>
 
 # { .fullpage }
-<img src="praise-blame-2.png" class="cover gh">
+<img src="images/praise-blame-2.png" class="cover gh">
 <p class="subtitle subtitletop">Blame</p>
 
 # { .fullpage }
-<img src="praise-star.png" class="cover gh">
+<img src="images/praise-star.png" class="cover gh">
 <p class="subtitle subtitletop">Star</p>
 
 # { .fullpage }
-<img src="praise-star-2.png" class="cover gh">
+<img src="images/praise-star-2.png" class="cover gh">
 <p class="subtitle subtitletop">Star</p>
 
 # { .fullpage }
-<img src="praise-star-3.png" class="cover gh">
+<img src="images/praise-star-3.png" class="cover gh">
 <p class="subtitle subtitletop">Star</p>
 
 # { .fullpage }
-<img src="praise-search.png" class="cover gh">
+<img src="images/praise-search.png" class="cover gh">
 <p class="subtitle subtitletop">Search: find users</p>
 
 # { .fullpage }
-<img src="praise-search-2.png" class="cover gh">
+<img src="images/praise-search-2.png" class="cover gh">
 <p class="subtitle subtitletop">Search: within repository</p>
 
 # { .fullpage }
-<img src="praise-search-3.png" class="cover gh">
+<img src="images/praise-search-3.png" class="cover gh">
 <p class="subtitle subtitletop">Search: all R code</p>
 
 # { .fullpage }
-<img src="praise-search-4.png" class="cover gh">
+<img src="images/praise-search-4.png" class="cover gh">
 <p class="subtitle subtitletop">Search: all CRAN packages</p>
 
 # Reading R code
