@@ -13,7 +13,7 @@
 
 ### 4 [Version control & git](http://mangothecat.github.io/github-workshop/04-version-control-and-git.html)
 
-### 5 [Best practices, Travis CI](http://mangothecat.github.io/github-workshop/05-best-practices.html)
+### 5 [Good practices, Travis CI](http://mangothecat.github.io/github-workshop/05-best-practices.html)
 
 ## License
 
