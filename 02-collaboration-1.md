@@ -1,5 +1,5 @@
 # Collaboration on GitHub #1
-Gábor Csárdi  
+GÃ¡bor CsÃ¡rdi  
 
 # Issues { .shout }
 
@@ -106,7 +106,7 @@ Gábor Csárdi
 
 # Writing good commit messages
 
-> * First line <50 characters, consice summary
+> * First line <50 characters, concise summary
 > * Then empty line, and more detailed discussion
 > * Wrap text at ~72 characters
 > * Refer to issues, related commits, users involved
@@ -119,7 +119,7 @@ Gábor Csárdi
 # Bad commit messages
 
 ```
-❯ git log --oneline
+â¯ git log --oneline
 2a2f940 more people using floor(<int>)
 eaaea2e lost part of 70391 (prcomp)
 c676fa2 Typo (PR#16790)
@@ -143,7 +143,7 @@ a502aa1 Updated.
 # Good commit messages
 
 ```
-❯ git log --oneline
+â¯ git log --oneline
 d076262 Add repo status badge to README
 b248f9b Add a bunch of adjectives
 8102103 Remove some wild adjectives
