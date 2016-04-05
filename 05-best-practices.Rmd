@@ -1,5 +1,5 @@
 ---
-title: "R & GitHub Best Practices"
+title: "R & GitHub Good Practices"
 author: "Gábor Csárdi"
 email: "gcsardi@mango-solutions.com"
 maketitle: true
@@ -145,7 +145,7 @@ after_success:
 
 <!-- # git Branches { .shout } -->
 
-# Best Practices<br> for R packages { .shout }
+# Good Practices<br> for R packages { .shout }
 
 # { .fullpage }
 <img class="cover gh" src="images/tests.png">

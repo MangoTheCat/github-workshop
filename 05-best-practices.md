@@ -1,4 +1,4 @@
-# R & GitHub Best Practices
+# R & GitHub Good Practices
 Gábor Csárdi  
 
 # Continuous Integration { .shout }
@@ -134,7 +134,7 @@ after_success:
 
 <!-- # git Branches { .shout } -->
 
-# Best Practices<br> for R packages { .shout }
+# Good Practices<br> for R packages { .shout }
 
 # { .fullpage }
 <img class="cover gh" src="images/tests.png">
