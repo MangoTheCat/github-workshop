@@ -106,7 +106,7 @@ Gábor Csárdi
 
 # Writing good commit messages
 
-> * First line <50 characters, consice summary
+> * First line <50 characters, concise summary
 > * Then empty line, and more detailed discussion
 > * Wrap text at ~72 characters
 > * Refer to issues, related commits, users involved
